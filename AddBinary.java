@@ -1,36 +1,30 @@
 import java.util.Scanner;
 
 public class AddBinary {
-	public static void main(String[] args) {
-		long bin1, bin2;
-		int i=0, carry =0;
-		
+		public static void main(String[] args) {
+		long binary1, binary2;
+		int i=0, carry =0;	
 		int[] sum = new int[20];
-		Scanner sc = new Scanner(System.in);
-		
-		
+		Scanner scan = new Scanner(System.in);
 		System.out.print("Enter first binary number: ");
-		bin1 = sc.nextLong();
-		if(isNotBinary(bin1)) {
+		binary1 = scan.nextLong();
+		if(isNotBinary(binary1)) {
 			System.out.println("Invalid number, \n Enter binary number: ");
-			bin1 = sc.nextLong();
+			binary1 = scan.nextLong();
 		}
 		System.out.print("Enter second binary number: ");
-		bin2 = sc.nextLong();
-		if(isNotBinary(bin2)) {
+		binary2 = scan.nextLong();
+		if(isNotBinary(binary2)) {
 			System.out.println("Invalid number, \n Enter binary number: ");
-			bin2 = sc.nextLong();
+			binary2 = scan.nextLong();
 		}
 		
-
-		//closing scanner after use to avoid memory leak
-		sc.close();
-		while (bin1 != 0 || bin2 != 0) 
+		while (binary1 != 0 || binary2 != 0) 
 		{
-			sum[i++] = (int)((bin1 % 10 + bin2 % 10 + carry) % 2);
-			carry = (int)((bin1 % 10 + bin2 % 10 + carry) / 2);
-			bin1 = bin1 / 10;
-			bin2 = bin2 / 10;
+			sum[i++] = (int)((binary1 % 10 + binary2 % 10 + carry) % 2);
+			carry = (int)((binary1 % 10 + binary2 % 10 + carry) / 2);
+			binary1 = binary1 / 10;
+			binary2 = binary2 / 10;
 		}
 		if (carry != 0) {
 			sum[i++] = carry;
@@ -42,13 +36,13 @@ public class AddBinary {
 		}	   
 	}
 	
-	public static boolean isNotBinary(long n) {
-		while(n!=0) {
-			if(n%10 >1)
-				return true;
-			n= n/10;
+	public static boolean isNotBinary(long number) {
+		//method to check the number which is not binary
+		while(number!=0) {
+			if(number%10 >1)
+				return true;		//true if number is not binary
+			number= number/10;
 		}
-		return false;
+		return false;			//false if number is binary
 	}
-
 }

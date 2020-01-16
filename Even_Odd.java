@@ -6,7 +6,7 @@ public class Even_Odd {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter the number : ");
 		int n = scan.nextInt();
-		sc.close();
+		scan.close();
 		if(n%2==0)
 			System.out.println("Given Number is even");
 		else

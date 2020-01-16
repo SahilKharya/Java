@@ -1,34 +1,44 @@
 import java.util.Scanner;
 
 public class Calculator {
-	public static void main() {
+	public static void main(String[] args) {
 		System.out.println("the Calculator -\n");
-		Scanner sc = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 		System.out.println("the first number :");
-		double n1 = sc.nextInt();
+		double number1 = scan.nextInt();
 		System.out.println("the second number :");
-		double n2 = sc.nextInt();
+		double number2 = scan.nextInt();
 		
-		System.out.println("Select operation to be performed :\n 'a' for Add, 's' for Subtract, 'm' for multiply, 'd' for divide ");
-		char op = sc.next().charAt(0);
+		System.out.println("Select operation to be performed :\n 'a' for Add, 's' for Subtract, 'm' for multiplytiply, 'd' for divideide ");
+		char operation = scan.next().charAt(0);
 		
-		switch(op) {
+		switch(operation) {
 		case 'a':
-			double sum = n1 + n2;
-			System.out.print("Addition of "+n1 +" and "+n2+" : "+ sum);
+			double sum = number1 + number2;
+			System.out.print("Addition of "+number1 +" and "+number2+" : "+ sum);
+			break;
 			
 		case 's':
-			double diff = n1 - n2;
-			System.out.print("Difference of "+n1 +" and "+n2+" : "+ diff);
+			double difference = number1 - number2;
+			System.out.print("difference of "+number1 +" and "+number2+" : "+ difference);
+			break;
 			
 		case 'm':
-			double mul = n1 + n2;
-			System.out.print("Multiplication of "+n1 +" and "+n2+" : "+ mul);
+			double multiply = number1 * number2;
+			System.out.print("multiplication of "+number1 +" and "+number2+" : "+ multiply);
+			break;
 			
 		case 'd':
-			double div = n1 + n2;
-			System.out.print("Division of "+n1 +" and "+n2+" : "+ div);
+			double divide = number1 / number2;
+			if(number2 != 0)
+				System.out.print("division of "+number1 +" and "+number2+" : "+ divide);
+			else
+				System.out.print("Error!!!      - a number is not divisible by 0");
+			break;
+		
+		default:
+			System.out.println("Please select a valid operation.");
+			return;
 		}
 	}
-
 }

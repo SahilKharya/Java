@@ -6,12 +6,12 @@ public class Vowel_Consonant {
 		boolean vowel = false;
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the character to check vowel or consonant : ");
-		char c = sc.next().charAt(0);
+		char input = sc.next().charAt(0);
 		char vowels[] = {'a','e','i','o','u','A','E','I','O','U'};
 		sc.close();
 		
 		for(int i=0; i<10; i++) {
-			if(c == vowels[i])
+			if(input == vowels[i])
 				vowel = true;	
 		}
 		if(vowel == true)

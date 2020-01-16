@@ -4,9 +4,9 @@ public class Palindrome {
 
 	public static void main(String[] args) {
 		System.out.println("\t Find Palindrome string - \n");
-		Scanner sc = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 		System.out.print("Enter the Text : ");
-		String textLine = sc.nextLine();
+		String textLine = scan.nextLine();
 		
 		String reverseText = new String();
 		for(int i=textLine.length()-1; i>=0; i--) {

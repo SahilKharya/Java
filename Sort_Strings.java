@@ -1,9 +1,9 @@
 import java.util.Scanner;
 public class Sort_Strings {
 	public static void main(String[] args) {
-	        Scanner sc = new Scanner(System.in);
+	        Scanner scan = new Scanner(System.in);
 	        System.out.println("Number of Strings to sort: ");
-	        int count = sc.nextInt();
+	        int count = scan.nextInt();
 	        Scanner scan2 = new Scanner(System.in);
 	
 	        String stringArray[] = new String[count];

@@ -4,16 +4,16 @@ public class Simple_Interest {
 	public static void main(String[] args) {
 		
 		System.out.println("\t Calculate Simple Interest \n\n");
-		Scanner sc = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 		System.out.print("Enter the Principle Value (P): ");
-		double value = sc.nextDouble();
+		double value = scan.nextDouble();
 		System.out.print("Enter the Rate of Interest (r) : ");
-		double rate = sc.nextDouble();
+		double rate = scan.nextDouble();
 		System.out.print("Enter the time duration(t) in years : ");
-		int years = sc.nextInt();
-		System.out.print("Enter the number of times interest is calculated per year :");
-		int period = sc.nextInt();
-		sc.close();
+		int years = scan.nextInt();
+		System.out.print("Enter the number of times interest calculated per year :");
+		int period = scan.nextInt();
+		scan.close();
 		
 		int totalTime = period * years;  // total time of interest calculated
 		double simpleInterest = value*(rate/100)*totalTime;

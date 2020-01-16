@@ -1,24 +1,20 @@
 import java.util.Scanner;
-import java.util.*;
 
 public class Palindrome {
 
 	public static void main(String[] args) {
-		System.out.println("\t Find Palindrome string - \n\n");
+		System.out.println("\t Find Palindrome string - \n");
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Enter the String : ");
-		String str1 = sc.nextLine();
+		System.out.print("Enter the Text : ");
+		String textLine = sc.nextLine();
 		
-		//System.out.print(str1.length());
-		String str2 = new String();
-		int count=0;
-		for(int i=str1.length()-1; i>=0; i--) {
-			str2 = str2 + str1.charAt(i);
-			//System.out.println(ch2);
+		String reverseText = new String();
+		for(int i=textLine.length()-1; i>=0; i--) {
+			reverseText = reverseText + textLine.charAt(i);			
 		}
-		System.out.println(str2);
+		System.out.println(reverseText);				//printing the input text in reverse
 				
-		if(str1.equals(str2))
+		if(textLine.equals(reverseText))
 			System.out.print("This is a palindrome string");
 		else
 			System.out.print("This is not a palindrome string");

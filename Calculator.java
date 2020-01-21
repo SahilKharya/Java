@@ -13,32 +13,32 @@ public class Calculator {
 		char operation = scan.next().charAt(0);
 		
 		switch(operation) {
-		case 'a':
-			double sum = number1 + number2;
-			System.out.print("Addition of "+number1 +" and "+number2+" : "+ sum);
-			break;
-			
-		case 's':
-			double difference = number1 - number2;
-			System.out.print("difference of "+number1 +" and "+number2+" : "+ difference);
-			break;
-			
-		case 'm':
-			double multiply = number1 * number2;
-			System.out.print("multiplication of "+number1 +" and "+number2+" : "+ multiply);
-			break;
-			
-		case 'd':
-			double divide = number1 / number2;
-			if(number2 != 0)
-				System.out.print("division of "+number1 +" and "+number2+" : "+ divide);
-			else
-				System.out.print("Error!!!      - a number is not divisible by 0");
-			break;
-		
-		default:
-			System.out.println("Please select a valid operation.");
-			return;
+			case 'a':
+				double sum = number1 + number2;
+				System.out.print("Addition of "+number1 +" and "+number2+" : "+ sum);
+				break;
+
+			case 's':
+				double difference = number1 - number2;
+				System.out.print("difference of "+number1 +" and "+number2+" : "+ difference);
+				break;
+
+			case 'm':
+				double multiply = number1 * number2;
+				System.out.print("multiplication of "+number1 +" and "+number2+" : "+ multiply);
+				break;
+
+			case 'd':
+				double divide = number1 / number2;
+				if(number2 != 0)
+					System.out.print("division of "+number1 +" and "+number2+" : "+ divide);
+				else
+					System.out.print("Error!!!      - infinite");
+				break;
+
+			default:
+				System.out.println("Please select a valid operation.");
+				return;
 		}
 	}
 }
